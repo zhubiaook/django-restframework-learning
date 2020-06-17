@@ -1,8 +1,6 @@
-import json
-def a(*args, **kwargs):
-    print(args)
-    print(kwargs)
-    print(**kwargs)
+from pygments import highlight
+from pygments.lexers import get_lexer_by_name
+from pygments.formatters.html import HtmlFormatter
 
-json.dumps()
-
+code = "print('hello world')"
+print(highlight(code, get_lexer_by_name('python'), HtmlFormatter()))
