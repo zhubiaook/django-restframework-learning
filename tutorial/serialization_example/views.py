@@ -187,6 +187,7 @@ class SnippetHighlight(generics.GenericAPIView):
         return Response(snippet.highlighted)
 '''
 
+
 class UserViewSet(viewsets.ReadOnlyModelViewSet):
     """
     This viewset automatically provides 'list', 'detail' actions.

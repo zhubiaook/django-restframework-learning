@@ -16,6 +16,7 @@ Including another URLconf
 from django.urls import path, include
 from rest_framework import routers
 from quickstart import views as quickstart_views
+from rest_framework.documentation import include_docs_urls
 
 
 route = routers.DefaultRouter()
@@ -26,6 +27,7 @@ route.register('group', quickstart_views.GroupViewSets)
 urlpatterns = [
     # path('', include(route.urls)),
     path('api-auth/', include('rest_framework.urls')),
-    path('', include('serialization_example.urls'))
+    path('', include('serialization_example.urls')),
+    path('docs/', include_docs_urls(title='文档', public=False))
 ]
 

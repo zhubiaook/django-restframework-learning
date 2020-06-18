@@ -1,0 +1,1 @@
+libmysqlclient-dev python3-dev libldap2-dev libsasl2-dev
